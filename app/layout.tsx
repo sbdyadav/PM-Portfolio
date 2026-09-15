@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Bhagwandas Yadav — Product Manager",
+  title: "Bhagwandas Yadav",
   description:
-    "Product manager building marketplace and operations systems across healthtech, quick commerce, and logistics.",
+    "Product manager. Teardowns, validation work and writing on finding the problem everyone else walked past.",
 };
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600&display=swap"
           rel="stylesheet"
         />
       </head>

@@ -1,0 +1,221 @@
+.page { padding-block: clamp(56px, 8vh, 88px) 88px; }
+
+/* ---- back link ---- */
+
+.back {
+  display: inline-block;
+  font-size: 13.5px;
+  color: var(--muted);
+  margin-bottom: 44px;
+  transition: color 0.2s var(--ease);
+}
+
+.back:hover { color: var(--accent); }
+
+/* ---- masthead ---- */
+
+.head { margin-bottom: 52px; }
+
+.kicker {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: clamp(26px, 4.2vw, 35px);
+  line-height: 1.2;
+  font-weight: 490;
+  letter-spacing: -0.031em;
+  color: var(--ink);
+  margin-bottom: 18px;
+  text-wrap: balance;
+}
+
+.standfirst {
+  font-size: 17px;
+  line-height: 1.62;
+  color: var(--body);
+  max-width: 56ch;
+}
+
+.byline {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--hair);
+  font-size: 13px;
+  color: var(--faint);
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* ---- body ---- */
+
+.body h2 {
+  font-size: 19px;
+  font-weight: 560;
+  letter-spacing: -0.019em;
+  color: var(--ink);
+  margin: 46px 0 14px;
+  line-height: 1.32;
+}
+
+.body h3 {
+  font-size: 16px;
+  font-weight: 560;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+  margin: 30px 0 9px;
+}
+
+.body p {
+  margin-bottom: 17px;
+  line-height: 1.72;
+  max-width: 62ch;
+}
+
+.body ul, .body ol {
+  margin: 0 0 19px 19px;
+  max-width: 60ch;
+}
+
+.body li { margin-bottom: 8px; line-height: 1.68; }
+
+.body strong { color: var(--ink); font-weight: 560; }
+
+.body a {
+  color: var(--body);
+  border-bottom: 1px solid var(--line);
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.body a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ---- callout: a claim set apart ---- */
+
+.pull {
+  margin: 34px 0;
+  padding-left: 20px;
+  border-left: 2px solid var(--accent);
+  font-size: 17.5px;
+  line-height: 1.56;
+  color: var(--ink);
+  letter-spacing: -0.013em;
+  max-width: 54ch;
+}
+
+/* ---- labelled block ---- */
+
+.block {
+  margin: 26px 0;
+  padding: 20px 22px;
+  background: var(--wash);
+  border-radius: 9px;
+}
+
+.blockLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 9px;
+}
+
+.block p:last-child { margin-bottom: 0; }
+
+/* ---- data row ---- */
+
+.figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 30px 0;
+  padding-block: 22px;
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+}
+
+.figure { display: flex; flex-direction: column; gap: 3px; }
+
+.figureN {
+  font-size: 23px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.026em;
+  font-variant-numeric: tabular-nums;
+}
+
+.figureL {
+  font-size: 12.5px;
+  color: var(--muted);
+  max-width: 21ch;
+  line-height: 1.45;
+}
+
+/* ---- comparison table ---- */
+
+.tableWrap { overflow-x: auto; margin: 26px 0; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 440px;
+}
+
+.table th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 11.5px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--faint);
+  padding: 0 14px 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.table td {
+  padding: 12px 14px 12px 0;
+  border-bottom: 1px solid var(--hair);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+.table td:first-child { color: var(--ink); font-weight: 500; }
+
+/* ---- steps ---- */
+
+.step {
+  margin: 34px 0;
+  padding-top: 26px;
+  border-top: 1px solid var(--hair);
+}
+
+.stepNum {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.085em;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+/* ---- footer ---- */
+
+.footer {
+  margin-top: 72px;
+  padding-top: 24px;
+  border-top: 1px solid var(--hair);
+  font-size: 12.5px;
+  color: var(--faint);
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.footer a { transition: color 0.2s var(--ease); }
+.footer a:hover { color: var(--accent); }

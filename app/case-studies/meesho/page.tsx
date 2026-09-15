@@ -204,6 +204,102 @@ export default function MeeshoTeardown() {
         </p>
       </section>
 
+      {/* How I'd test the top fix */}
+      <section className={`wrap ${styles.recBlock}`}>
+        <h2 className={styles.h2}>How I&apos;d test the first fix</h2>
+        <p className={styles.recIntro}>
+          Partial COD is the highest-severity break and the first thing
+          I&apos;d ship. Here is the experiment, including the conditions
+          under which I&apos;d kill it.
+        </p>
+
+        <div className={styles.argument}>
+          <Arg label="Hypothesis">
+            If verified resellers can pay ~20% upfront and the remainder on
+            delivery, completed orders from repeat resellers rise — because
+            the constraint was working capital, not trust.
+          </Arg>
+          <Arg label="Primary metric">
+            Completed orders per reseller per month, among toggle-identified
+            resellers with prior order history.
+          </Arg>
+          <Arg label="Guardrail">
+            RTO rate on partial-COD orders must not exceed the current COD
+            baseline. Kill this if RTO rises materially — even if completed
+            orders improve.
+          </Arg>
+          <Arg label="Sample and duration">
+            ~6 weeks, verified resellers only, segmented by city tier and by
+            order history depth.
+          </Arg>
+          <Arg label="If it comes back flat">
+            Check uptake of the partial-COD option first. Low uptake points
+            to a discoverability problem, fixable in the checkout UI. Normal
+            uptake with no lift in completed orders means working capital
+            wasn&apos;t the binding constraint, and the real blocker sits
+            earlier — most likely the sourcing signal in break one.
+          </Arg>
+          <Arg label="I&apos;d be wrong if">
+            Partial COD converts no better than the current block. That
+            would mean resellers aren&apos;t capital-constrained at the
+            moment of purchase, and my reading of Sunita&apos;s cash cycle
+            is wrong.
+          </Arg>
+        </div>
+      </section>
+
+      {/* v1 appendix */}
+      <section className={`wrap ${styles.closeBlock}`}>
+        <h2 className={styles.h2}>Appendix — what I got wrong the first time</h2>
+        <p>
+          The first version of this teardown analysed Meesho as a shopping
+          app. My user was a tier-2 first-time buyer, price-led, with
+          Flipkart already installed. My goal was first-order activation.
+          The work was thorough — zone-by-zone screen breakdowns, a
+          severity-ranked friction log, steelmanned counter-arguments,
+          experiment designs with kill criteria.
+        </p>
+        <p>
+          <strong>It was pointed at the wrong person.</strong> Meesho&apos;s
+          business runs on resellers. Analysing it as a consumer shopping
+          app meant every conclusion, however well argued, answered a
+          question that mattered less.
+        </p>
+        <p>
+          The COD finding shows the cost most clearly. Both versions flagged
+          the same screen. They disagree about everything that follows from
+          it:
+        </p>
+
+        <div className={styles.argument}>
+          <Arg label="Version one — buyer">
+            Root cause: broken trust. COD is promised as a reassurance badge
+            on three screens, then withdrawn at payment. Fix: show prepaid
+            and COD prices side by side from screen one, so the cost of COD
+            is visible rather than sprung.
+          </Arg>
+          <Arg label="Version two — reseller">
+            Root cause: working-capital mismatch. Sunita has already
+            collected her customer&apos;s cash and is being asked to front
+            money before Meesho ships. Fix: partial COD for verified
+            resellers with order history.
+          </Arg>
+        </div>
+
+        <p>
+          One of those is a copy and pricing change. The other is a
+          financing mechanism. Same screen, same friction — and the only
+          thing that changed was who I decided was standing in front of it.
+        </p>
+        <p>
+          I&apos;ve kept the first version rather than quietly replacing it,
+          because the gap between them is the actual lesson. Choosing the
+          user is the highest-leverage decision in a teardown, and it
+          happens before any analysis starts — which is exactly when
+          it&apos;s easiest to get wrong without noticing.
+        </p>
+      </section>
+
       <div className="wrap">
         <footer className={styles.footer}>
           <Link href="/" className={styles.back}>
@@ -343,6 +439,15 @@ function BuildStep({
         <h3>{title}</h3>
         <p>{resolves}</p>
       </div>
+    </div>
+  );
+}
+
+function Arg({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div className={styles.argBlock}>
+      <div className={styles.argLabel}>{label}</div>
+      <p>{children}</p>
     </div>
   );
 }
