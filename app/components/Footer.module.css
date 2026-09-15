@@ -1,0 +1,35 @@
+.foot {
+  margin-top: 96px;
+  border-top: 1px solid var(--hair);
+  padding-block: 34px 44px;
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 32px;
+  align-items: baseline;
+}
+
+.name {
+  font-size: 14.5px;
+  font-weight: 520;
+  color: var(--ink);
+}
+
+.place { font-size: 13.5px; color: var(--faint); }
+
+.links {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-size: 14px;
+}
+
+.links a { color: var(--muted); transition: color 0.2s var(--ease); }
+.links a:hover { color: var(--accent); }
+
+@media (max-width: 560px) {
+  .links { margin-left: 0; width: 100%; }
+}

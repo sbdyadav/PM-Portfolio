@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "The Meesho reseller teardown — Bhagwandas Yadav",
+  title: "Meesho, walked as a reseller",
   description:
     "Walking Meesho's app as a reseller, not a buyer: five chronological breaks and a sequenced fix, verified against real screenshots.",
 };
@@ -11,15 +11,15 @@ export const metadata = {
 export default function MeeshoTeardown() {
   return (
     <>
-      <div className="wrap">
-        <Link href="/" className={styles.back}>
-          ← Back to portfolio
+      <div className="narrow">
+        <Link href="/work" className={styles.back}>
+          ← Work
         </Link>
       </div>
 
       {/* Cover */}
-      <section className={`wrap ${styles.cover}`}>
-        <span className={styles.tag}>Reseller economics · Meesho</span>
+      <section className={`narrow ${styles.cover}`}>
+        <span className={styles.tag}>Teardown · Meesho · 2026</span>
         <h1 className={styles.title}>
           Three reasonable decisions, stacked together, work against
           Meesho&apos;s own resellers
@@ -29,6 +29,24 @@ export default function MeeshoTeardown() {
           of where a real reseller&apos;s task breaks, and why — walked
           step by step, verified against the actual app.
         </p>
+
+        <div className={styles.downloadRow}>
+          <a
+            href="/downloads/meesho-reseller-teardown.pdf"
+            className={styles.download}
+            download
+          >
+            ↓ Download the teardown{" "}
+            <span className={styles.downloadMeta}>PDF · 15 pages</span>
+          </a>
+          <a
+            href="/downloads/meesho-buyer-teardown-v1.pdf"
+            className={styles.downloadGhost}
+            download
+          >
+            ↓ Version 1 <span className={styles.downloadMeta}>PDF · 6 pages</span>
+          </a>
+        </div>
 
         <div className={styles.personaCard}>
           <div className={styles.personaName}>Sunita, 34 — Nagpur</div>
@@ -132,7 +150,7 @@ export default function MeeshoTeardown() {
       />
 
       {/* Recommendation */}
-      <section className={`wrap ${styles.recBlock}`}>
+      <section className={`narrow ${styles.recBlock}`}>
         <h2 className={styles.h2}>What actually needs building</h2>
         <p className={styles.recIntro}>
           Two of the five fixes aren&apos;t the toggle itself — they&apos;re
@@ -159,7 +177,7 @@ export default function MeeshoTeardown() {
       </section>
 
       {/* Build sequence */}
-      <section className={`wrap ${styles.buildBlock}`}>
+      <section className={`narrow ${styles.buildBlock}`}>
         <h2 className={styles.h2}>Build sequence</h2>
         <p className={styles.buildIntro}>
           Sunita hit these breaks in the order 1 through 5. The build order
@@ -187,7 +205,7 @@ export default function MeeshoTeardown() {
       </section>
 
       {/* Close / caveats */}
-      <section className={`wrap ${styles.closeBlock}`}>
+      <section className={`narrow ${styles.closeBlock}`}>
         <h2 className={styles.h2}>What I&apos;m confident in, and what I&apos;m not</h2>
         <p>
           The ₹52-per-unit shift between quantity 1 and quantity 2 is
@@ -205,7 +223,7 @@ export default function MeeshoTeardown() {
       </section>
 
       {/* How I'd test the top fix */}
-      <section className={`wrap ${styles.recBlock}`}>
+      <section className={`narrow ${styles.recBlock}`}>
         <h2 className={styles.h2}>How I&apos;d test the first fix</h2>
         <p className={styles.recIntro}>
           Partial COD is the highest-severity break and the first thing
@@ -249,7 +267,7 @@ export default function MeeshoTeardown() {
       </section>
 
       {/* v1 appendix */}
-      <section className={`wrap ${styles.closeBlock}`}>
+      <section className={`narrow ${styles.closeBlock}`}>
         <h2 className={styles.h2}>Appendix — what I got wrong the first time</h2>
         <p>
           The first version of this teardown analysed Meesho as a shopping
@@ -298,14 +316,35 @@ export default function MeeshoTeardown() {
           happens before any analysis starts — which is exactly when
           it&apos;s easiest to get wrong without noticing.
         </p>
+
+        <div className={styles.downloadRow}>
+          <a
+            href="/downloads/meesho-buyer-teardown-v1.pdf"
+            className={styles.downloadGhost}
+            download
+          >
+            ↓ Read version 1 in full{" "}
+            <span className={styles.downloadMeta}>PDF · 6 pages</span>
+          </a>
+          <a
+            href="/downloads/meesho-reseller-teardown.pdf"
+            className={styles.download}
+            download
+          >
+            ↓ Read version 2{" "}
+            <span className={styles.downloadMeta}>PDF · 15 pages</span>
+          </a>
+        </div>
       </section>
 
-      <div className="wrap">
+      <div className="narrow">
         <footer className={styles.footer}>
-          <Link href="/" className={styles.back}>
-            ← Back to portfolio
+          <Link href="/work" className={styles.back}>
+            ← All work
           </Link>
-          <span>Bhagwandas Yadav</span>
+          <Link href="/work/round-up-investing" className={styles.back}>
+            Round-Up Investing →
+          </Link>
         </footer>
       </div>
     </>
@@ -344,7 +383,7 @@ function StepSection({
   isLast?: boolean;
 }) {
   return (
-    <section className={`wrap ${styles.step} ${isLast ? styles.lastStep : ""}`}>
+    <section className={`narrow ${styles.step} ${isLast ? styles.lastStep : ""}`}>
       <div className={styles.stepHead}>
         <span className={styles.stepNum}>Step {num}</span>
         <span className={styles.evidenceTag}>{evidence}</span>

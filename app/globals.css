@@ -1,30 +1,33 @@
 :root {
-  --paper: #FCFBF8;
+  --paper: #FFFFFF;
+  --tint: #F7F6F3;
   --raised: #FFFFFF;
   --ink: #14161A;
-  --body: #454A55;
-  --muted: #8A8F9B;
-  --faint: #B4B8C1;
-  --line: #E8E5DD;
-  --hair: #F1EFE8;
-  --accent: #AB4318;
-  --wash: #F4F2EB;
+  --body: #4A4F59;
+  --muted: #858A95;
+  --faint: #AEB2BB;
+  --line: #E6E4DF;
+  --hair: #F0EEEA;
+  --accent: #1F5AE0;
+  --accentSoft: #EDF2FE;
 
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --nav-h: 62px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --paper: #0C0D10;
-    --raised: #131519;
-    --ink: #F0EFEC;
-    --body: #A5AAB4;
-    --muted: #6C717C;
-    --faint: #4A4F58;
-    --line: #21242A;
-    --hair: #191C21;
-    --accent: #E88354;
-    --wash: #16191E;
+    --tint: #131519;
+    --raised: #14161B;
+    --ink: #F2F1EE;
+    --body: #A8ADB7;
+    --muted: #767B86;
+    --faint: #565B64;
+    --line: #23262C;
+    --hair: #1A1D22;
+    --accent: #7AA3F5;
+    --accentSoft: #161C27;
   }
 }
 
@@ -33,60 +36,54 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--nav-h) + 20px);
 }
 
 body {
   background: var(--paper);
   color: var(--body);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  font-size: 15.5px;
+  font-size: 16px;
   line-height: 1.62;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "cv05" 1, "cv11" 1, "ss01" 1;
-  text-rendering: optimizeLegibility;
 }
 
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 
-::selection { background: var(--wash); color: var(--ink); }
+::selection { background: var(--accentSoft); color: var(--ink); }
 
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
-.wrap {
-  max-width: 660px;
+.shell {
+  max-width: 940px;
   margin: 0 auto;
-  padding-inline: 30px;
+  padding-inline: 32px;
 }
 
-.wide {
-  max-width: 760px;
+.narrow {
+  max-width: 680px;
   margin: 0 auto;
-  padding-inline: 30px;
+  padding-inline: 32px;
 }
 
-/* entrance — quiet, once, and never for people who ask it off */
 @keyframes rise {
-  from { opacity: 0; transform: translateY(7px); }
+  from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: none; }
 }
 
-.reveal {
-  animation: rise 0.62s var(--ease) both;
-}
-
+.reveal { animation: rise 0.6s var(--ease) both; }
 .reveal:nth-child(1) { animation-delay: 0.02s; }
-.reveal:nth-child(2) { animation-delay: 0.08s; }
-.reveal:nth-child(3) { animation-delay: 0.14s; }
-.reveal:nth-child(4) { animation-delay: 0.20s; }
-.reveal:nth-child(5) { animation-delay: 0.26s; }
-.reveal:nth-child(6) { animation-delay: 0.32s; }
-.reveal:nth-child(7) { animation-delay: 0.38s; }
+.reveal:nth-child(2) { animation-delay: 0.09s; }
+.reveal:nth-child(3) { animation-delay: 0.16s; }
+.reveal:nth-child(4) { animation-delay: 0.23s; }
+.reveal:nth-child(5) { animation-delay: 0.30s; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -94,7 +91,25 @@ img { max-width: 100%; display: block; }
   * { transition-duration: 0.01ms !important; }
 }
 
-@media (max-width: 640px) {
-  body { font-size: 15px; }
-  .wrap, .wide { padding-inline: 22px; }
+@media (max-width: 680px) {
+  body { font-size: 15.5px; }
+  .shell, .narrow { padding-inline: 22px; }
+}
+
+/* ---- print: clean document output ---- */
+@media print {
+  :root {
+    --paper: #fff; --tint: #f4f4f2; --raised: #fff;
+    --ink: #111; --body: #333; --muted: #555; --faint: #777;
+    --line: #ccc; --hair: #e2e2e2; --accent: #1F5AE0; --accentSoft: #eef3fd;
+  }
+  nav, footer { display: none !important; }
+  body { font-size: 10.5pt; line-height: 1.5; background: #fff; }
+  .narrow, .shell { max-width: none; padding-inline: 0; }
+  a[class*="download"], a[class*="back"], div[class*="next"] { display: none !important; }
+  h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+  p, li, table, div[class*="block"], div[class*="pull"] {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  @page { size: A4; margin: 15mm 16mm; }
 }

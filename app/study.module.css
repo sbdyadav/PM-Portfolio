@@ -1,0 +1,281 @@
+.page { padding-block: clamp(44px, 7vh, 72px) 0; }
+
+.back {
+  display: inline-block;
+  font-size: 13.5px;
+  color: var(--muted);
+  margin-bottom: 36px;
+  transition: color 0.2s var(--ease);
+}
+.back:hover { color: var(--accent); }
+
+/* ---- head ---- */
+
+.head { margin-bottom: 44px; }
+
+.chipRow { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
+
+.chip {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accentSoft);
+  padding: 3px 9px;
+  border-radius: 20px;
+}
+
+.year { font-size: 12.5px; color: var(--faint); font-variant-numeric: tabular-nums; }
+
+.title {
+  font-size: clamp(28px, 4.6vw, 40px);
+  line-height: 1.16;
+  font-weight: 540;
+  letter-spacing: -0.033em;
+  color: var(--ink);
+  margin-bottom: 20px;
+  text-wrap: balance;
+}
+
+.standfirst {
+  font-size: clamp(17px, 2vw, 19px);
+  line-height: 1.58;
+  color: var(--body);
+  max-width: 58ch;
+}
+
+/* ---- meta strip ---- */
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 40px;
+  align-items: flex-end;
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid var(--hair);
+}
+
+.metaItem { display: flex; flex-direction: column; gap: 3px; }
+
+.metaLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.metaValue { font-size: 14.5px; color: var(--ink); font-weight: 480; }
+
+/* ---- download ---- */
+
+.download {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  transition: border-color 0.22s var(--ease), background-color 0.22s var(--ease),
+    transform 0.22s var(--ease);
+}
+
+.download:hover {
+  border-color: var(--ink);
+  background: var(--tint);
+  transform: translateY(-1px);
+}
+
+.downloadMeta { color: var(--faint); font-weight: 400; font-size: 12.5px; }
+
+.downloadRow { display: flex; flex-wrap: wrap; gap: 12px; margin: 30px 0 0; }
+
+.downloadRow .download { margin-left: 0; }
+
+@media (max-width: 620px) {
+  .meta { gap: 16px 28px; }
+  .download { margin-left: 0; width: 100%; justify-content: center; }
+}
+
+/* ---- body ---- */
+
+.body { padding-block: 8px 0; }
+
+.body h2 {
+  font-size: clamp(21px, 2.6vw, 25px);
+  font-weight: 560;
+  letter-spacing: -0.024em;
+  color: var(--ink);
+  margin: 54px 0 16px;
+  line-height: 1.26;
+}
+
+.body h3 {
+  font-size: 17px;
+  font-weight: 560;
+  letter-spacing: -0.014em;
+  color: var(--ink);
+  margin: 32px 0 10px;
+}
+
+.body p { margin-bottom: 18px; line-height: 1.72; max-width: 64ch; }
+
+.body ul, .body ol { margin: 0 0 20px 20px; max-width: 62ch; }
+.body li { margin-bottom: 9px; line-height: 1.68; }
+
+.body strong { color: var(--ink); font-weight: 570; }
+
+.body a {
+  color: var(--accent);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 34%, transparent);
+  transition: border-color 0.2s var(--ease);
+}
+.body a:hover { border-bottom-color: var(--accent); }
+
+/* ---- pull quote ---- */
+
+.pull {
+  margin: 40px 0;
+  padding: 4px 0 4px 24px;
+  border-left: 3px solid var(--accent);
+  font-size: clamp(18px, 2.2vw, 21px);
+  line-height: 1.5;
+  color: var(--ink);
+  letter-spacing: -0.018em;
+  font-weight: 460;
+  max-width: 54ch;
+}
+
+/* ---- labelled block ---- */
+
+.block {
+  margin: 24px 0;
+  padding: 22px 24px;
+  background: var(--tint);
+  border-radius: 12px;
+}
+
+.blockLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.block p { margin-bottom: 12px; }
+.block p:last-child { margin-bottom: 0; }
+
+.blockAccent { background: var(--accentSoft); }
+.blockAccent .blockLabel { color: var(--accent); }
+
+/* ---- grid of blocks ---- */
+
+.grid { display: grid; gap: 14px; margin: 24px 0; }
+.grid2 { grid-template-columns: repeat(auto-fit, minmax(258px, 1fr)); }
+
+.gridCard {
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.gridCard h4 {
+  font-size: 15px;
+  font-weight: 555;
+  color: var(--ink);
+  margin-bottom: 7px;
+  letter-spacing: -0.012em;
+}
+
+.gridCard p { font-size: 14.5px; line-height: 1.6; margin-bottom: 0; }
+
+/* ---- figures ---- */
+
+.figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+  margin: 32px 0;
+  padding-block: 24px;
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+}
+
+.figure { display: flex; flex-direction: column; gap: 4px; }
+
+.figureN {
+  font-size: 27px;
+  font-weight: 550;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+.figureL { font-size: 13px; color: var(--muted); max-width: 22ch; line-height: 1.42; }
+
+/* ---- table ---- */
+
+.tableWrap { overflow-x: auto; margin: 28px 0; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14.5px;
+  min-width: 460px;
+}
+
+.table th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 11.5px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--faint);
+  padding: 0 16px 11px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.table td {
+  padding: 13px 16px 13px 0;
+  border-bottom: 1px solid var(--hair);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+.table td:first-child { color: var(--ink); font-weight: 500; }
+
+/* ---- step ---- */
+
+.step { margin: 40px 0; padding-top: 30px; border-top: 1px solid var(--hair); }
+
+.stepNum {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.085em;
+  color: var(--accent);
+  margin-bottom: 9px;
+}
+
+/* ---- next ---- */
+
+.next {
+  margin-top: 64px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 14.5px;
+  flex-wrap: wrap;
+}
+
+.next a { color: var(--muted); transition: color 0.2s var(--ease); }
+.next a:hover { color: var(--accent); }
