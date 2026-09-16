@@ -73,9 +73,14 @@ export default function Home() {
             >
               GitHub
             </a>
-            <span className={styles.rowLabel}>Mumbai · IST</span>
           </div>
         </div>
+
+        <p className={styles.async}>
+          Mumbai, IST — four and a half hours of overlap with London.
+          Everything above was written to be picked up and run by someone who
+          wasn&apos;t in the room.
+        </p>
 
         <div className={styles.resume}>
           <span className={styles.headLabel}>Resume</span>

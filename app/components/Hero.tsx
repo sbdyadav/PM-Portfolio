@@ -8,7 +8,9 @@ export default function Hero() {
       <div className={styles.col}>
         <div className={styles.eyebrowRow}>
           <span className={styles.rule} />
-          <span className={styles.eyebrowText}>Product manager · Mumbai</span>
+          <span className={styles.eyebrowText}>
+            Product · Marketplaces &amp; commerce · Mumbai
+          </span>
         </div>
 
         <h1 className={styles.statement}>
@@ -20,14 +22,16 @@ export default function Hero() {
         <p className={styles.para}>
           At Udaan, a ₹2.5Cr-a-month loss everyone called a warehouse problem
           turned out, two million shipment records later, to be last-mile
-          fraud. At Medikabazaar, a category that looked short on supply was
-          actually short on seller financing — so we shipped an EMI model, not
-          more SKUs.
+          fraud. Fixing it recovered ₹2.2Cr a month. At Medikabazaar, a
+          category that looked short on supply was actually short on seller
+          financing — so we shipped an EMI model, not more SKUs.
         </p>
 
         <p className={styles.close}>
-          Eight years, four companies, same instinct. If you&apos;re still
-          deciding what to build, that&apos;s the conversation I want.
+          Eight years, four companies, same instinct — a 0-to-1 category
+          charter, a warehouse system across 50 dark stores, a fraud fix
+          across 14. If you&apos;re still deciding what to build, that&apos;s
+          the conversation I want.
         </p>
 
         <div className={styles.logos}>
