@@ -8,13 +8,6 @@ export default function CompanyRoles() {
   const [co, setCo] = useState<CompanyKey | null>(null);
   const active = companies.find((c) => c.key === co) ?? null;
 
-  const jump = (key: CompanyKey) => {
-    const el = document.getElementById(`role-${key}`);
-    if (!el) return;
-    const y = el.getBoundingClientRect().top + window.scrollY - 86;
-    window.scrollTo({ top: y, behavior: "smooth" });
-  };
-
   return (
     <div className={styles.wrap}>
       <div className={styles.row}>
@@ -26,8 +19,9 @@ export default function CompanyRoles() {
             onMouseEnter={() => setCo(c.key)}
             onMouseLeave={() => setCo(null)}
             onFocus={() => setCo(c.key)}
-            onClick={() => jump(c.key)}
-            aria-label={`${c.role} at ${c.name} — jump to details`}
+            onClick={() => setCo(co === c.key ? null : c.key)}
+            aria-label={`${c.role} at ${c.name}`}
+            aria-expanded={co === c.key}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -61,8 +55,7 @@ export default function CompanyRoles() {
           </div>
         ) : (
           <p className={styles.hint}>
-            Four companies. Each one below in full — or pick a mark to jump
-            straight to it.
+            Four companies. Pick a mark to see what I owned there.
           </p>
         )}
       </div>

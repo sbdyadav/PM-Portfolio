@@ -85,10 +85,6 @@ export default function Home() {
         <div className={styles.resume}>
           <span className={styles.headLabel}>Resume</span>
           <div className={styles.resumeRow}>
-            <p className={styles.resumeLine}>
-              Eight years, four companies, the numbers behind each one. One
-              page and a bit.
-            </p>
             <a href="/resume.pdf" className={styles.btn} download>
               Download PDF ↓
             </a>
