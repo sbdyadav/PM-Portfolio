@@ -84,6 +84,13 @@ h1, h2, h3, h4 { font-family: var(--font-cormorant), Georgia, serif; font-weight
   * { transition-duration: 0.01ms !important; }
 }
 
+/* Small screens paint the content immediately. The reveal's opacity +
+   transform transition interacts badly with the nav's backdrop-filter on
+   iOS Safari, leaving blank regions until you scroll past and back. */
+@media (max-width: 680px) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+}
+
 @media (max-width: 680px) {
   .container, .long, .teardown { padding-inline: 24px; }
 }

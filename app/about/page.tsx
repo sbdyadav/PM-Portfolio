@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import s from "../study.module.css";
 import styles from "./about.module.css";
+import CompanyRoles from "../components/CompanyRoles";
 
 export const metadata: Metadata = {
   title: "About",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 
 const roles = [
   {
+    key: "medikabazaar",
     title: "Program Manager, Product Marketplace",
     company: "Medikabazaar",
     sector: "Healthtech",
@@ -24,6 +26,7 @@ const roles = [
     ],
   },
   {
+    key: "zepto",
     title: "Process Excellence Manager, Product Operations",
     company: "Zepto",
     sector: "Quick commerce",
@@ -37,6 +40,7 @@ const roles = [
     ],
   },
   {
+    key: "udaan",
     title: "Program Lead, Logistics & Trust",
     company: "Udaan.com",
     sector: "B2B marketplace",
@@ -50,6 +54,7 @@ const roles = [
     ],
   },
   {
+    key: "eatclub",
     title: "City Manager, Growth & Operations",
     company: "EatClub",
     sector: "D2C food commerce",
@@ -97,12 +102,17 @@ export default function About() {
           wrong.
         </p>
 
+      </div>
+
+      <CompanyRoles />
+
+      <div className={s.body}>
         <h2>Experience</h2>
       </div>
 
       <div className={styles.roles}>
         {roles.map((r) => (
-          <article key={r.company} className={styles.role}>
+          <article key={r.company} id={`role-${r.key}`} className={styles.role}>
             <div className={styles.roleHead}>
               <div>
                 <h3 className={styles.roleTitle}>{r.title}</h3>

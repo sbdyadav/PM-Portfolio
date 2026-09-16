@@ -1,13 +1,8 @@
-"use client";
-
-import { useState } from "react";
+import Link from "next/link";
 import styles from "./Hero.module.css";
-import { companies, CompanyKey } from "../data/companies";
+import { companies } from "../data/companies";
 
 export default function Hero() {
-  const [co, setCo] = useState<CompanyKey | null>(null);
-  const active = companies.find((c) => c.key === co) ?? null;
-
   return (
     <section className={styles.hero}>
       <div className={styles.col}>
@@ -37,59 +32,31 @@ export default function Hero() {
 
         <div className={styles.logos}>
           {companies.map((c) => (
-            <button
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img
               key={c.key}
-              type="button"
-              className={`${styles.logoBtn} ${co === c.key ? styles.on : ""}`}
-              onMouseEnter={() => setCo(c.key)}
-              onFocus={() => setCo(c.key)}
-              onClick={() => setCo(co === c.key ? null : c.key)}
-              aria-expanded={co === c.key}
-              aria-label={`${c.name} — ${c.role}`}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={c.logo}
-                alt={c.name}
-                className={styles.logoImg}
-                style={{ height: c.cap }}
-              />
-            </button>
+              src={c.logo}
+              alt={c.name}
+              className={styles.logoImg}
+              style={{ height: c.cap }}
+            />
           ))}
         </div>
 
-        <div className={styles.slot}>
-          {active ? (
-            <div className={styles.pop}>
-              <div className={styles.popTop}>
-                <span className={styles.popRole}>{active.role}</span>
-                <span className={styles.popDates}>{active.dates}</span>
-              </div>
-              <div className={styles.popSector}>{active.sector}</div>
-              <div className={styles.popBullets}>
-                {active.bullets.map((b, i) => (
-                  <div key={i} className={styles.popRow}>
-                    <span className={styles.dash} aria-hidden="true">
-                      —
-                    </span>
-                    <span>{b}</span>
-                  </div>
-                ))}
-              </div>
-              <a href="/resume.pdf" className={styles.popLink} download>
-                The full resume — PDF ↓
-              </a>
-            </div>
-          ) : (
-            <p className={styles.hint}>
-              Four companies. Hover one to see what I owned there.
-            </p>
-          )}
-        </div>
+        <Link href="/#work" className={styles.driver}>
+          Two teardowns below — including the one where I got the user wrong
+          first <span aria-hidden="true">↓</span>
+        </Link>
       </div>
 
       <div className={styles.portrait}>
-        <div className={styles.plate}>
+        <a
+          href="https://www.linkedin.com/in/bhagwandas-yadav/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.plate}
+          aria-label="Bhagwandas Yadav on LinkedIn"
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/photo.jpg"
@@ -98,7 +65,7 @@ export default function Hero() {
             width={360}
             height={450}
           />
-        </div>
+        </a>
       </div>
     </section>
   );

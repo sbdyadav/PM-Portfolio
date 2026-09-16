@@ -4,7 +4,9 @@ import { useEffect } from "react";
 
 export default function Reveal() {
   useEffect(() => {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce =
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      window.matchMedia("(max-width: 680px)").matches;
     const nodes = Array.from(
       document.querySelectorAll<HTMLElement>("[data-reveal]")
     );

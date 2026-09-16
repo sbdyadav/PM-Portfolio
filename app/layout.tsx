@@ -35,6 +35,21 @@ export const metadata: Metadata = {
     url: "https://bhagwandasyadav.vercel.app",
     siteName: "Bhagwandas Yadav",
     type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Bhagwandas Yadav — I find the problem everyone else walked past.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bhagwandas Yadav — Product Manager",
+    description:
+      "Most roadmaps I've inherited were full of well-built answers to the wrong question.",
+    images: ["/og.png"],
   },
 };
 

@@ -1,0 +1,98 @@
+.wrap { margin: 30px 0 8px; }
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+  padding-block: 22px;
+  border-top: 1px solid var(--hair-soft);
+  border-bottom: 1px solid var(--hair-soft);
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 12px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s var(--ease);
+}
+
+.btn:hover, .btn.on { border-bottom-color: var(--accent-mid); }
+
+.logo {
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  opacity: 0.74;
+  mix-blend-mode: multiply;
+  transition: opacity 0.2s var(--ease);
+}
+
+.btn:hover .logo, .btn.on .logo { opacity: 1; }
+
+/* reserved slot keeps the page from jumping */
+
+.slot { min-height: 178px; margin-top: 16px; }
+
+.hint {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--body);
+  opacity: 0.8;
+  max-width: 52ch;
+}
+
+.pop {
+  padding: 20px 22px;
+  background: var(--ground-warm);
+  border: 1px solid var(--hair-strong);
+  border-radius: 3px;
+  max-width: 58ch;
+}
+
+.popTop { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+
+.popRole {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 20px;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.popDates {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--body);
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.popSector { font-size: 13px; color: var(--body); margin-top: 3px; }
+
+.popBullets { margin-top: 10px; }
+
+.popRow {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px solid var(--hair-soft);
+  font-size: 15px;
+  line-height: 1.62;
+}
+
+.dash { color: var(--accent-light); }
+
+@media (max-width: 560px) {
+  .row { gap: 6px; padding-block: 18px; }
+  .btn { padding: 10px 4px; }
+  .slot { min-height: 0; margin-top: 14px; }
+}

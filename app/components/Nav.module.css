@@ -30,6 +30,8 @@
 
 .mark:hover { color: var(--accent-dark); }
 
+.spacer { margin-right: auto; }
+
 .link {
   font-size: 11px;
   letter-spacing: 0.16em;
@@ -44,10 +46,11 @@
 .active { color: var(--accent-dark); }
 
 @media (max-width: 620px) {
-  .mark { font-size: 19px; }
-  .link { padding: 8px 7px; font-size: 10px; letter-spacing: 0.13em; }
+  .mark { font-size: 18px; }
+  .link { padding: 8px 6px; font-size: 10px; letter-spacing: 0.12em; }
 }
 
-@media (max-width: 420px) {
-  .mark { max-width: 96px; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 440px) {
+  .mark { font-size: 16px; }
+  .link { padding: 8px 5px; font-size: 9.5px; letter-spacing: 0.1em; }
 }
