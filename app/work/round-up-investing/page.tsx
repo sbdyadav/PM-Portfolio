@@ -10,18 +10,15 @@ export const metadata: Metadata = {
 
 export default function RoundUp() {
   return (
-    <main className={`narrow ${s.page}`}>
-      <Link href="/work" className={s.back}>
+    <main className={`long ${s.page}`}>
+      <Link href="/#work" className={s.back}>
         ← Work
       </Link>
 
       <header className={s.head}>
-        <div className={s.chipRow}>
-          <span className={s.chip}>Validation</span>
-          <span className={s.year}>2026</span>
-        </div>
+        <span className={s.eyebrow}>Validation · 2026</span>
         <h1 className={s.title}>Validating Round-Up Investing</h1>
-        <p className={s.standfirst}>
+        <p className={s.lede}>
           A feature brief handed over the way a real leader hands one over:
           round up every UPI payment to the next ₹10, quietly invest the
           spare change. This is how I&apos;d find out whether it deserves to
@@ -37,15 +34,21 @@ export default function RoundUp() {
             <span className={s.metaLabel}>Status</span>
             <span className={s.metaValue}>Plan, not a completed study</span>
           </div>
-          <a
-            href="/downloads/round-up-investing-validation.pdf"
-            className={s.download}
-            download
-          >
-            ↓ Download PDF <span className={s.downloadMeta}>full document</span>
-          </a>
+
         </div>
       </header>
+
+      <Link href="/work/round-up-investing/field-kit" className={s.kit}>
+        <div>
+          <div className={s.kitTitle}>The interview field kit</div>
+          <p className={s.kitDesc}>
+            The printable version a moderator actually carries into the room —
+            screener, staged prompts with ruled writing lines, the
+            design-method task, and the synthesis table.
+          </p>
+        </div>
+        <span className={s.kitCta}>Open the field kit →</span>
+      </Link>
 
       <div className={s.body}>
         <h2>The brief</h2>
@@ -99,8 +102,8 @@ export default function RoundUp() {
           talks to a user until these exist.
         </p>
 
-        <div className={s.block}>
-          <div className={s.blockLabel}>Strategic fit</div>
+        <div className={s.card}>
+          <div className={s.cardLabel}>Strategic fit</div>
           <p>
             Mission, tightened to this feature: shatter the psychological
             barriers to saving and investing, building healthy everyday
@@ -117,8 +120,8 @@ export default function RoundUp() {
           </p>
         </div>
 
-        <div className={s.block}>
-          <div className={s.blockLabel}>User value</div>
+        <div className={s.card}>
+          <div className={s.cardLabel}>User value</div>
           <p>
             <strong>Profile:</strong> urban professionals, 26–32, metro and
             Tier-1 cities, earning ₹40–80k a month. Mid-career, with enough
@@ -151,8 +154,8 @@ export default function RoundUp() {
           </p>
         </div>
 
-        <div className={s.block}>
-          <div className={s.blockLabel}>Business value</div>
+        <div className={s.card}>
+          <div className={s.cardLabel}>Business value</div>
           <p>
             Users build initial trust in the investing product through a
             low-stakes, no-decision entry point, which makes them receptive
@@ -243,8 +246,8 @@ export default function RoundUp() {
           in context, then thirty on real validation questions.
         </p>
 
-        <div className={s.block}>
-          <div className={s.blockLabel}>How the session opens</div>
+        <div className={s.card}>
+          <div className={s.cardLabel}>How the session opens</div>
           <p>
             &ldquo;Before we start, just so you know — I&apos;m not from the
             investing team, I&apos;m just trying to learn how people
@@ -354,8 +357,8 @@ export default function RoundUp() {
           itself.
         </p>
 
-        <div className={`${s.block} ${s.blockAccent}`}>
-          <div className={s.blockLabel}>The three knobs, and a deliberate adaptation</div>
+        <div className={`${s.card} ${s.cardAccent}`}>
+          <div className={s.cardLabel}>The three knobs, and a deliberate adaptation</div>
           <p>
             <strong>Method:</strong> give reasons for their actions,
             structured as &ldquo;use it silently first, then explain.&rdquo;
@@ -402,8 +405,8 @@ export default function RoundUp() {
           hesitation is the finding.
         </p>
 
-        <div className={s.block}>
-          <div className={s.blockLabel}>Holding the role consistently</div>
+        <div className={s.card}>
+          <div className={s.cardLabel}>Holding the role consistently</div>
           <p>
             Stay silent and avoid reacting, verbally or facially, while the
             participant navigates the flow — resisting the urge to clarify
@@ -428,18 +431,18 @@ export default function RoundUp() {
           validation, or invalidate and take it back to my manager.
         </p>
 
-        <div className={s.figures}>
+        <div className={s.metrics}>
           <div className={s.figure}>
-            <span className={s.figureN}>~268</span>
-            <span className={s.figureL}>registrations needed for 6 interviews</span>
+            <span className={s.metricN}>~268</span>
+            <span className={s.metricL}>registrations needed for 6 interviews</span>
           </div>
           <div className={s.figure}>
-            <span className={s.figureN}>₹270–750</span>
-            <span className={s.figureL}>monthly accumulation at 90–150 transactions</span>
+            <span className={s.metricN}>₹270–750</span>
+            <span className={s.metricL}>monthly accumulation at 90–150 transactions</span>
           </div>
           <div className={s.figure}>
-            <span className={s.figureN}>40–60%</span>
-            <span className={s.figureL}>of 8M MAU assumed never-invested</span>
+            <span className={s.metricN}>40–60%</span>
+            <span className={s.metricL}>of 8M MAU assumed never-invested</span>
           </div>
         </div>
 
@@ -468,20 +471,22 @@ export default function RoundUp() {
           usefully, what I&apos;d refuse to spend it on.
         </div>
 
-        <div className={s.downloadRow}>
+        <div className={s.downloads}>
           <a
             href="/downloads/round-up-investing-validation.pdf"
             className={s.download}
             download
           >
-            ↓ Download the full document{" "}
-            <span className={s.downloadMeta}>PDF</span>
+            Download the plan — PDF ↓
           </a>
+          <Link href="/work/round-up-investing/field-kit" className={s.dlGhost}>
+            Open the field kit →
+          </Link>
         </div>
       </div>
 
       <div className={s.next}>
-        <Link href="/work">← All work</Link>
+        <Link href="/#work">← All work</Link>
         <Link href="/work/meesho-reseller-teardown">
           Meesho teardown →
         </Link>

@@ -5,10 +5,10 @@ import { usePathname } from "next/navigation";
 import styles from "./Nav.module.css";
 
 const items = [
-  { href: "/work", label: "Work" },
-  { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/#work", label: "Work", match: "/work" },
+  { href: "/about", label: "About", match: "/about" },
+  { href: "/blog", label: "Writing", match: "/blog" },
+  { href: "/#contact", label: "Contact", match: "__contact" },
 ];
 
 export default function Nav() {
@@ -16,26 +16,25 @@ export default function Nav() {
 
   return (
     <nav className={styles.bar}>
-      <div className={`shell ${styles.inner}`}>
-        <Link href="/" className={styles.brand}>
+      <div className={`container ${styles.inner}`}>
+        <Link href="/" className={styles.mark}>
           Bhagwandas Yadav
         </Link>
-        <div className={styles.links}>
-          {items.map((it) => {
-            const active =
-              pathname === it.href || pathname.startsWith(it.href + "/");
-            return (
-              <Link
-                key={it.href}
-                href={it.href}
-                className={`${styles.link} ${active ? styles.active : ""}`}
-                aria-current={active ? "page" : undefined}
-              >
-                {it.label}
-              </Link>
-            );
-          })}
-        </div>
+        {items.map((it) => {
+          const active =
+            it.match !== "__contact" &&
+            (pathname === it.match || pathname.startsWith(it.match + "/"));
+          return (
+            <Link
+              key={it.label}
+              href={it.href}
+              className={`${styles.link} ${active ? styles.active : ""}`}
+              aria-current={active ? "page" : undefined}
+            >
+              {it.label}
+            </Link>
+          );
+        })}
       </div>
     </nav>
   );

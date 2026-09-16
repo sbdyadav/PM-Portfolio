@@ -65,10 +65,10 @@ const roles = [
 
 export default function About() {
   return (
-    <main className={`narrow ${s.page}`}>
+    <main className={`long ${s.page}`}>
       <header className={s.head}>
-        <h1 className={s.title}>About</h1>
-        <p className={s.standfirst}>
+        <h1 className={`${s.title} ${s.titleAbout}`}>About</h1>
+        <p className={s.lede}>
           I own problems end to end — find the real one, build the case for
           it, and ship it across whatever functions it touches.
         </p>
@@ -92,7 +92,7 @@ export default function About() {
         <p>
           Now looking for senior product roles in marketplaces and commerce,
           where the hard part is deciding what to build rather than how. The{" "}
-          <Link href="/work">teardowns and validation work</Link> are the
+          <Link href="/#work">teardowns and validation work</Link> are the
           same instinct, applied in public — including the parts I got
           wrong.
         </p>
@@ -139,13 +139,13 @@ export default function About() {
           The <Link href="/blog">blog</Link> is mostly about diagnosis. If
           you want the compressed version,{" "}
           <a href="/resume.pdf">the résumé is here</a>, or{" "}
-          <Link href="/contact">get in touch</Link>.
+          <Link href="/#contact">get in touch</Link>.
         </p>
       </div>
 
       <div className={s.next}>
-        <Link href="/work">← Work</Link>
-        <Link href="/contact">Contact →</Link>
+        <Link href="/#work">← Work</Link>
+        <Link href="/#contact">Contact →</Link>
       </div>
     </main>
   );

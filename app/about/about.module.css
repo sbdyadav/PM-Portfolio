@@ -1,55 +1,18 @@
-.roles { margin: 26px 0 8px; }
+.roles { margin: 20px 0 0; }
 
-.role {
-  padding-block: 26px;
-  border-top: 1px solid var(--hair);
-}
+.role { padding: 28px 0; border-top: 1px solid var(--hair-soft); }
+.role:last-child { border-bottom: 1px solid var(--hair-soft); }
 
-.role:last-child { border-bottom: 1px solid var(--hair); }
+.roleHead { display: flex; align-items: baseline; gap: 18px; margin-bottom: 8px; }
 
-.roleHead {
-  display: flex;
-  align-items: baseline;
-  gap: 18px;
-  margin-bottom: 10px;
-}
+.roleTitle { font-family: var(--font-cormorant), Georgia, serif; font-size: 23px; font-weight: 400; color: var(--ink); line-height: 1.2; }
+.roleCo { font-size: 14.5px; color: var(--body); margin-top: 3px; }
 
-.roleTitle {
-  font-size: 17px;
-  font-weight: 560;
-  color: var(--ink);
-  letter-spacing: -0.016em;
-  line-height: 1.32;
-}
+.roleWhen { margin-left: auto; font-size: 12.5px; color: var(--body); white-space: nowrap; flex-shrink: 0; font-variant-numeric: tabular-nums; }
 
-.roleCo { font-size: 14.5px; color: var(--muted); margin-top: 2px; }
-
-.roleWhen {
-  margin-left: auto;
-  font-size: 12.5px;
-  color: var(--faint);
-  white-space: nowrap;
-  flex-shrink: 0;
-  font-variant-numeric: tabular-nums;
-}
-
-.roleScope {
-  font-size: 15px;
-  color: var(--ink);
-  font-weight: 460;
-  margin-bottom: 12px;
-  max-width: 60ch;
-}
+.roleScope { font-size: 15.5px; color: var(--ink); margin-bottom: 12px; max-width: 60ch; }
 
 .roleList { margin: 0 0 0 19px; max-width: 62ch; }
+.roleList li { margin-bottom: 8px; font-size: 15.5px; line-height: 1.72; }
 
-.roleList li {
-  margin-bottom: 8px;
-  line-height: 1.64;
-  font-size: 15px;
-}
-
-@media (max-width: 560px) {
-  .roleHead { flex-direction: column; gap: 4px; }
-  .roleWhen { margin-left: 0; }
-}
+@media (max-width: 560px) { .roleHead { flex-direction: column; gap: 4px; } .roleWhen { margin-left: 0; } }

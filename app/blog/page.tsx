@@ -1,55 +1,64 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import s from "../study.module.css";
-import styles from "../page.module.css";
-import { featuredPosts, archivePosts, Post } from "../data/posts";
+import b from "./blog.module.css";
+import { featuredPosts, archivePosts } from "../data/posts";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Writing",
   description:
     "Essays on problem diagnosis, product operations and supply chain systems.",
 };
 
 export default function Blog() {
   return (
-    <main className={`shell ${s.page}`}>
+    <main className={`long ${s.page}`}>
       <header className={s.head}>
-        <h1 className={s.title}>Blog</h1>
-        <p className={s.standfirst}>
-          Mostly about diagnosis — how problems get framed, and what it
-          costs when the frame is wrong. A few on the supply chain and
-          quality systems I spent years inside. Published on LinkedIn.
+        <h1 className={s.title}>Writing</h1>
+        <p className={s.lede}>
+          Mostly about diagnosis — how problems get framed, and what it costs
+          when the frame is wrong. A few on the supply chain and quality
+          systems I spent years inside.
         </p>
       </header>
 
-      <Group label="Selected" posts={featuredPosts} />
-      <Group label="More" posts={archivePosts} />
-    </main>
-  );
-}
-
-function Group({ label, posts }: { label: string; posts: Post[] }) {
-  return (
-    <section className={styles.section}>
-      <div className={styles.sectionTop}>
-        <h2 className={styles.sectionTitle}>{label}</h2>
-      </div>
-      <div className={styles.cards}>
-        {posts.map((p) => (
+      <section className={b.group}>
+        <span className={b.label}>Selected</span>
+        {featuredPosts.map((p) => (
           <a
             key={p.href}
             href={p.href}
-            className={styles.card}
+            className={b.item}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className={styles.cardTop}>
-              <span className={styles.cardYear}>{p.date}</span>
-            </div>
-            <h3 className={styles.cardTitle}>{p.title}</h3>
-            <p className={styles.cardDesc}>{p.blurb}</p>
+            <span className={b.date}>{p.date}</span>
+            <h2 className={b.title}>{p.title}</h2>
+            <p className={b.blurb}>{p.blurb}</p>
           </a>
         ))}
+      </section>
+
+      <section className={b.group}>
+        <span className={b.label}>More</span>
+        {archivePosts.map((p) => (
+          <a
+            key={p.href}
+            href={p.href}
+            className={b.compact}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className={b.compactTitle}>{p.title}</span>
+            <span className={b.compactDate}>{p.date}</span>
+          </a>
+        ))}
+      </section>
+
+      <div className={s.next}>
+        <Link href="/#work">← Work</Link>
+        <Link href="/about">About →</Link>
       </div>
-    </section>
+    </main>
   );
 }

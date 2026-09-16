@@ -1,7 +1,24 @@
 import type { Metadata } from "next";
+import { Cormorant_Garamond, Lora } from "next/font/google";
 import Nav from "./components/Nav";
-import Footer from "./components/Footer";
+import Reveal from "./components/Reveal";
 import "./globals.css";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-lora",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bhagwandasyadav.vercel.app"),
@@ -10,11 +27,11 @@ export const metadata: Metadata = {
     template: "%s — Bhagwandas Yadav",
   },
   description:
-    "Product manager working on marketplaces and commerce. Teardowns, validation work and writing on finding the problem everyone else walked past.",
+    "Product manager working on marketplaces and commerce. Teardowns, validation work and writing on going back to the question.",
   openGraph: {
     title: "Bhagwandas Yadav — Product Manager",
     description:
-      "Teardowns, validation work and writing on finding the problem everyone else walked past.",
+      "Most roadmaps I've inherited were full of well-built answers to the wrong question.",
     url: "https://bhagwandasyadav.vercel.app",
     siteName: "Bhagwandas Yadav",
     type: "website",
@@ -27,23 +44,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600;650&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={`${cormorant.variable} ${lora.variable}`}>
       <body>
         <Nav />
         {children}
-        <Footer />
+        <Reveal />
       </body>
     </html>
   );

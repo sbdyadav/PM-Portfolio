@@ -11,14 +11,14 @@ export const metadata = {
 export default function MeeshoTeardown() {
   return (
     <>
-      <div className="narrow">
-        <Link href="/work" className={styles.back}>
+      <div className="teardown">
+        <Link href="/#work" className={styles.back}>
           ← Work
         </Link>
       </div>
 
       {/* Cover */}
-      <section className={`narrow ${styles.cover}`}>
+      <section className={`teardown ${styles.cover}`}>
         <span className={styles.tag}>Teardown · Meesho · 2026</span>
         <h1 className={styles.title}>
           Three reasonable decisions, stacked together, work against
@@ -36,15 +36,13 @@ export default function MeeshoTeardown() {
             className={styles.download}
             download
           >
-            ↓ Download the teardown{" "}
-            <span className={styles.downloadMeta}>PDF · 15 pages</span>
+            Download the teardown — PDF ↓
           </a>
           <a
-            href="/downloads/meesho-buyer-teardown-v1.pdf"
+            href="/work/meesho-reseller-teardown/v1"
             className={styles.downloadGhost}
-            download
           >
-            ↓ Version 1 <span className={styles.downloadMeta}>PDF · 6 pages</span>
+            Read version one →
           </a>
         </div>
 
@@ -150,7 +148,7 @@ export default function MeeshoTeardown() {
       />
 
       {/* Recommendation */}
-      <section className={`narrow ${styles.recBlock}`}>
+      <section className={`teardown ${styles.recBlock}`}>
         <h2 className={styles.h2}>What actually needs building</h2>
         <p className={styles.recIntro}>
           Two of the five fixes aren&apos;t the toggle itself — they&apos;re
@@ -177,7 +175,7 @@ export default function MeeshoTeardown() {
       </section>
 
       {/* Build sequence */}
-      <section className={`narrow ${styles.buildBlock}`}>
+      <section className={`teardown ${styles.buildBlock}`}>
         <h2 className={styles.h2}>Build sequence</h2>
         <p className={styles.buildIntro}>
           Sunita hit these breaks in the order 1 through 5. The build order
@@ -205,7 +203,7 @@ export default function MeeshoTeardown() {
       </section>
 
       {/* Close / caveats */}
-      <section className={`narrow ${styles.closeBlock}`}>
+      <section className={`teardown ${styles.closeBlock}`}>
         <h2 className={styles.h2}>What I&apos;m confident in, and what I&apos;m not</h2>
         <p>
           The ₹52-per-unit shift between quantity 1 and quantity 2 is
@@ -223,7 +221,7 @@ export default function MeeshoTeardown() {
       </section>
 
       {/* How I'd test the top fix */}
-      <section className={`narrow ${styles.recBlock}`}>
+      <section className={`teardown ${styles.recBlock}`}>
         <h2 className={styles.h2}>How I&apos;d test the first fix</h2>
         <p className={styles.recIntro}>
           Partial COD is the highest-severity break and the first thing
@@ -267,7 +265,7 @@ export default function MeeshoTeardown() {
       </section>
 
       {/* v1 appendix */}
-      <section className={`narrow ${styles.closeBlock}`}>
+      <section className={`teardown ${styles.closeBlock}`}>
         <h2 className={styles.h2}>Appendix — what I got wrong the first time</h2>
         <p>
           The first version of this teardown analysed Meesho as a shopping
@@ -318,28 +316,25 @@ export default function MeeshoTeardown() {
         </p>
 
         <div className={styles.downloadRow}>
+          <Link
+            href="/work/meesho-reseller-teardown/v1"
+            className={styles.download}
+          >
+            Read version one in full →
+          </Link>
           <a
             href="/downloads/meesho-buyer-teardown-v1.pdf"
             className={styles.downloadGhost}
             download
           >
-            ↓ Read version 1 in full{" "}
-            <span className={styles.downloadMeta}>PDF · 6 pages</span>
-          </a>
-          <a
-            href="/downloads/meesho-reseller-teardown.pdf"
-            className={styles.download}
-            download
-          >
-            ↓ Read version 2{" "}
-            <span className={styles.downloadMeta}>PDF · 15 pages</span>
+            Version one — PDF ↓
           </a>
         </div>
       </section>
 
-      <div className="narrow">
+      <div className="teardown">
         <footer className={styles.footer}>
-          <Link href="/work" className={styles.back}>
+          <Link href="/#work" className={styles.back}>
             ← All work
           </Link>
           <Link href="/work/round-up-investing" className={styles.back}>
@@ -383,29 +378,15 @@ function StepSection({
   isLast?: boolean;
 }) {
   return (
-    <section className={`narrow ${styles.step} ${isLast ? styles.lastStep : ""}`}>
+    <section className={`teardown ${styles.step} ${isLast ? styles.lastStep : ""}`}>
+      <div className={styles.stepText}>
       <div className={styles.stepHead}>
         <span className={styles.stepNum}>Step {num}</span>
         <span className={styles.evidenceTag}>{evidence}</span>
       </div>
       <h2 className={styles.stepTitle}>{title}</h2>
       <p className={styles.scene}>{scene}</p>
-      <p className={styles.body}>{body}</p>
-
-      <div className={styles.evidenceGrid}>
-        <div className={styles.screenshotCol}>
-          <div className={styles.screenshotFrame}>
-            <Image
-              src={screenshot}
-              alt={screenshotAlt}
-              width={330}
-              height={727}
-              className={styles.screenshotImg}
-            />
-          </div>
-          <span className={styles.screenshotCaption}>Current — real screenshot</span>
-        </div>
-      </div>
+      <div className={styles.body}><p>{body}</p></div>
 
       {priceTable && (
         <table className={styles.priceTable}>
@@ -457,6 +438,22 @@ function StepSection({
           {verdict}
         </span>
         {verdictNote && <span className={styles.verdictNote}>{verdictNote}</span>}
+      </div>
+      </div>
+
+      <div className={styles.evidenceGrid}>
+        <div className={styles.screenshotCol}>
+          <div className={styles.screenshotFrame}>
+            <Image
+              src={screenshot}
+              alt={screenshotAlt}
+              width={330}
+              height={727}
+              className={styles.screenshotImg}
+            />
+          </div>
+          <span className={styles.screenshotCaption}>Current — real screenshot</span>
+        </div>
       </div>
     </section>
   );

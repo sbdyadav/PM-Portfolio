@@ -1,0 +1,134 @@
+.note {
+  max-width: 760px;
+  padding-left: 20px;
+  border-left: 2px solid var(--accent-mid);
+  margin-bottom: clamp(30px, 5vh, 48px);
+}
+
+.note p { max-width: 62ch; }
+.note strong { color: var(--ink); font-weight: 600; }
+
+.sec {
+  max-width: 860px;
+  padding-top: clamp(30px, 5vh, 48px);
+  margin-top: clamp(36px, 6vh, 64px);
+  border-top: 1px solid var(--hair-strong);
+}
+
+.secNum {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--accent-light);
+  font-variant-numeric: lining-nums tabular-nums;
+  display: block;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.h2 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(26px, 3.2vw, 38px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+
+/* label / body rows */
+
+.rows { max-width: 760px; }
+
+.row {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px;
+  padding: 16px 0;
+  border-top: 1px solid var(--hair-soft);
+}
+
+.row:last-child { border-bottom: 1px solid var(--hair-soft); }
+
+.rowLabel {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  padding-top: 4px;
+}
+
+.row p { font-size: 15.5px; line-height: 1.72; }
+
+.caveat {
+  font-style: italic;
+  font-size: 14.5px;
+  color: var(--body);
+  opacity: 0.85;
+  max-width: 60ch;
+}
+
+.hot { color: var(--accent-dark); }
+
+/* ranked problems */
+
+.rank { max-width: 760px; }
+
+.rankRow {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: baseline;
+  padding: 18px 0;
+  border-top: 1px solid var(--hair-soft);
+}
+
+.rankRow:last-child { border-bottom: 1px solid var(--hair-soft); }
+
+.rankN {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 28px;
+  color: var(--accent-light);
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 1;
+}
+
+.rankRow h3 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 21px;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+
+.rankRow p { font-size: 15px; line-height: 1.65; }
+
+.rankTag {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* experiment args */
+
+.argGrid { display: grid; gap: 20px; max-width: 760px; }
+
+.arg { padding-left: 18px; border-left: 1px solid var(--hair-strong); }
+
+.argLabel {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.arg p { font-size: 15.5px; line-height: 1.72; max-width: 60ch; }
+
+@media (max-width: 620px) {
+  .row { grid-template-columns: 1fr; gap: 6px; }
+  .rankRow { grid-template-columns: auto minmax(0, 1fr); }
+  .rankTag { grid-column: 1 / -1; text-align: left; }
+}
