@@ -58,7 +58,7 @@ export default function Home() {
           </a>
           <div className={styles.row}>
             <a
-              href="https://www.linkedin.com/in/bhagwandas-yadav/"
+              href="https://www.linkedin.com/in/bhagwandas-yadav"
               className={styles.rowLink}
               target="_blank"
               rel="noopener noreferrer"

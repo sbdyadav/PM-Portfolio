@@ -55,7 +55,7 @@ export default function Hero() {
 
       <div className={styles.portrait}>
         <a
-          href="https://www.linkedin.com/in/bhagwandas-yadav/"
+          href="https://www.linkedin.com/in/bhagwandas-yadav"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.plate}
