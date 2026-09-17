@@ -65,6 +65,12 @@
   }
 
   .contact a { color: var(--body); text-decoration: none; }
+  .contact a.named {
+    color: var(--accent-dark);
+    border-bottom: 0.5pt solid var(--accent-mid);
+    padding-bottom: 0.5pt;
+  }
+  .contact .sep { color: var(--accent-mid); padding: 0 3pt; }
   .contact .phone { color: var(--ink); font-variant-numeric: lining-nums tabular-nums; }
 
   /* ---- sections ---- */
@@ -161,9 +167,10 @@
     </div>
     <div class="contact">
       <span class="phone">+91 77097 97679</span><br>
-      yadavbd77@gmail.com<br>
-      bhagwandasyadav.vercel.app<br>
-      linkedin.com/in/bhagwandas-yadav<br>
+      <a href="mailto:yadavbd77@gmail.com">yadavbd77@gmail.com</a><br>
+      <a class="named" href="https://bhagwandasyadav.vercel.app">Portfolio</a>
+      <span class="sep">·</span>
+      <a class="named" href="https://www.linkedin.com/in/bhagwandas-yadav/">LinkedIn</a><br>
       Mumbai, India
     </div>
   </header>
