@@ -325,3 +325,45 @@
   .download, .downloadGhost { width: 100%; justify-content: center; }
   .buildStep { grid-template-columns: 1fr; gap: 6px; }
 }
+
+/* Phones: a four-column price comparison is unreadable squeezed into 343px,
+   so each row becomes a labelled block instead. */
+@media (max-width: 620px) {
+  .priceTable,
+  .priceTable tbody,
+  .priceTable tr,
+  .priceTable td { display: block; width: 100%; }
+
+  .priceTable thead { display: none; }
+
+  .priceTable tr {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--hair-soft);
+  }
+
+  .priceTable tr:first-child { border-top: 1px solid var(--hair-strong); }
+
+  .priceTable td {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 3px 0;
+    border: none;
+  }
+
+  .priceTable td:first-child {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-size: 19px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .priceTable td[data-label]:not(:first-child)::before {
+    content: attr(data-label);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    flex: 0 0 110px;
+  }
+}

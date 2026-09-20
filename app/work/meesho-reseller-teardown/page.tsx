@@ -401,7 +401,9 @@ function StepSection({
             {priceTable.rows.map((row, i) => (
               <tr key={i}>
                 {row.map((cell, j) => (
-                  <td key={j}>{cell}</td>
+                  <td key={j} data-label={priceTable.headers[j]}>
+                    {cell}
+                  </td>
                 ))}
               </tr>
             ))}

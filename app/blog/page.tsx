@@ -40,7 +40,7 @@ export default function Blog() {
       </section>
 
       <section className={b.group}>
-        <span className={b.label}>More</span>
+        <span className={b.label}>Also</span>
         {archivePosts.map((p) => (
           <a
             key={p.href}

@@ -96,7 +96,7 @@ export default function RoundUp() {
           is explicitly out of scope.
         </p>
 
-        <h2>Part A — Manager briefing</h2>
+        <h2>The brief, pressure-tested</h2>
         <p>
           Three claims, each written so it could be proven wrong. Nobody
           talks to a user until these exist.
@@ -182,7 +182,7 @@ export default function RoundUp() {
           who own the underlying fund; and marketing, for launch messaging.
         </p>
 
-        <h2>Part B — Six users, and how to reach them</h2>
+        <h2>Six users, and how to reach them</h2>
         <p>
           Six completed interviews, recruited honestly rather than
           optimistically. Working backwards through the funnel — 75%
@@ -339,7 +339,7 @@ export default function RoundUp() {
           </table>
         </div>
 
-        <h2>Part C — Why an interview alone isn&apos;t enough</h2>
+        <h2>Why an interview alone isn&apos;t enough</h2>
         <p>
           These users are immersed in payments but not in investing. Several
           personas show active avoidance, or a history of abandoning
@@ -420,7 +420,7 @@ export default function RoundUp() {
           </p>
         </div>
 
-        <h2>Part D — Synthesis, and what would make me wrong</h2>
+        <h2>Synthesis, and what would make me wrong</h2>
         <p>
           The synthesis sheets are built and deliberately empty, waiting on
           findings. Each hypothesis resolves to one of three outcomes —{" "}

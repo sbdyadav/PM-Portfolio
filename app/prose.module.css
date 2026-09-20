@@ -159,13 +159,25 @@
 
 /* ---- comparison table ---- */
 
-.tableWrap { overflow-x: auto; margin: 26px 0; }
+.tableWrap {
+  overflow-x: auto;
+  margin: 26px 0;
+  -webkit-overflow-scrolling: touch;
+  background:
+    linear-gradient(to right, var(--ground) 30%, transparent),
+    linear-gradient(to left, var(--ground) 30%, transparent) 100% 0,
+    radial-gradient(farthest-side at 0 50%, rgba(32,31,29,0.14), transparent),
+    radial-gradient(farthest-side at 100% 50%, rgba(32,31,29,0.14), transparent) 100% 0;
+  background-repeat: no-repeat;
+  background-size: 34px 100%, 34px 100%, 12px 100%, 12px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
 
 .table {
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
-  min-width: 440px;
+  min-width: 420px;
 }
 
 .table th {

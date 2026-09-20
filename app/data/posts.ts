@@ -37,25 +37,4 @@ export const archivePosts: Post[] = [
     blurb:
       "An aerospace manufacturer spent $2.3M chasing a 23% defect rate. The measurement system was generating 60% of the variation — the real rate was 9%.",
   },
-  {
-    href: "https://www.linkedin.com/pulse/21-trillion-procurement-revolution-why-90-companies-still-yadav-vkyxc/",
-    title: "The $2.1 trillion procurement revolution",
-    date: "Jul 2025",
-    blurb:
-      "Should-cost analysis, total cost of ownership, and why the cheaper machine cost 60% more a year.",
-  },
-  {
-    href: "https://www.linkedin.com/pulse/why-your-supply-chain-needs-risk-management-playbook-how-yadav-voarf/",
-    title: "Why your supply chain needs a risk management playbook",
-    date: "Aug 2025",
-    blurb:
-      "Five risk categories, and the financial questions that decide how much prevention is worth buying.",
-  },
-  {
-    href: "https://www.linkedin.com/pulse/resilient-supply-chain-playbook-why-your-next-crisis-response-yadav-ry1gf/",
-    title: "The resilient supply chain playbook",
-    date: "Aug 2025",
-    blurb:
-      "Relationship architecture, cultural DNA, network design — and why resilience is a profit centre rather than a cost.",
-  },
 ];
