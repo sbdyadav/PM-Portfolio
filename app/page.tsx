@@ -77,9 +77,8 @@ export default function Home() {
         </div>
 
         <p className={styles.async}>
-          Mumbai, IST — four and a half hours of overlap with London.
-          Everything above was written to be picked up and run by someone who
-          wasn&apos;t in the room.
+          Based in Mumbai. Everything above was written to be picked up and
+          run by someone who wasn&apos;t in the room.
         </p>
 
         <div className={styles.resume}>
