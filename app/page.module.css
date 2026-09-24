@@ -184,10 +184,3 @@
   .card { grid-template-columns: 1fr; gap: 10px; }
 }
 
-.async {
-  margin-top: 20px;
-  font-size: 14.5px;
-  line-height: 1.68;
-  color: var(--body);
-  max-width: 46ch;
-}

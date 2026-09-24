@@ -76,11 +76,6 @@ export default function Home() {
           </div>
         </div>
 
-        <p className={styles.async}>
-          Based in Mumbai. Everything above was written to be picked up and
-          run by someone who wasn&apos;t in the room.
-        </p>
-
         <div className={styles.resume}>
           <span className={styles.headLabel}>Resume</span>
           <div className={styles.resumeRow}>
