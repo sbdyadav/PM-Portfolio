@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Validating Round-Up Investing",
   description:
     "A pre-build validation plan for a UPI round-up investing feature: three falsifiable hypotheses, a staged interview guide, and a design-method session.",
+  alternates: { canonical: "/work/round-up-investing" }
 };
 
 export default function RoundUp() {

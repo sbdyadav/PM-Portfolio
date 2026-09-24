@@ -6,6 +6,7 @@ export const metadata = {
   title: "Meesho, walked as a reseller",
   description:
     "Walking Meesho's app as a reseller, not a buyer: five chronological breaks and a sequenced fix, verified against real screenshots.",
+  alternates: { canonical: "/work/meesho-reseller-teardown" }
 };
 
 export default function MeeshoTeardown() {

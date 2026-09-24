@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Eight years across B2B marketplaces, quick commerce and logistics — and what I'm looking for next.",
+  alternates: { canonical: "/about" }
 };
 
 

@@ -23,13 +23,14 @@ const lora = Lora({
 export const metadata: Metadata = {
   metadataBase: new URL("https://bhagwandasyadav.vercel.app"),
   title: {
-    default: "Bhagwandas Yadav — Product Manager",
+    default: "Bhagwandas Yadav — Product Manager, Marketplaces & Commerce",
     template: "%s — Bhagwandas Yadav",
   },
   description:
     "Product manager working on marketplaces and commerce. Teardowns, validation work and writing on going back to the question.",
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Bhagwandas Yadav — Product Manager",
+    title: "Bhagwandas Yadav — Product Manager, Marketplaces & Commerce",
     description:
       "Most roadmaps I've inherited were full of well-built answers to the wrong question.",
     url: "https://bhagwandasyadav.vercel.app",
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bhagwandas Yadav — Product Manager",
+    title: "Bhagwandas Yadav — Product Manager, Marketplaces & Commerce",
     description:
       "Most roadmaps I've inherited were full of well-built answers to the wrong question.",
     images: ["/og.png"],

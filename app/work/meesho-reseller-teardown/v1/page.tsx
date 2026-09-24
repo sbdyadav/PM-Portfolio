@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Meesho teardown, version one",
   description:
     "The first version of the Meesho teardown — walked as a first-time buyer, not a reseller. Kept because the gap between the versions is the lesson.",
+  alternates: { canonical: "/work/meesho-reseller-teardown/v1" }
 };
 
 export default function MeeshoV1() {

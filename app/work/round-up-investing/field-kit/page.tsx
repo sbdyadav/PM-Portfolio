@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Interview field kit — Round-Up Investing",
   description:
     "The printable moderator kit: screener, staged prompts, the design-method task and the synthesis table.",
+  alternates: { canonical: "/work/round-up-investing/field-kit" }
 };
 
 const stage2 = [

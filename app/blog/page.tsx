@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Writing",
   description:
     "Essays on problem diagnosis, product operations and supply chain systems.",
+  alternates: { canonical: "/blog" }
 };
 
 export default function Blog() {

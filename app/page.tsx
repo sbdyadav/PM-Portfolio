@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Hero from "./components/Hero";
+import PersonSchema from "./components/PersonSchema";
 import styles from "./page.module.css";
 
 const cards = [
@@ -26,6 +27,7 @@ const cards = [
 export default function Home() {
   return (
     <main>
+      <PersonSchema />
       <Hero />
 
       <section id="work" className={`container ${styles.work}`} data-reveal>
