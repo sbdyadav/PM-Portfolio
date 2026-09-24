@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function MeeshoTeardown() {
   return (
-    <>
+    <main>
       <div className="teardown">
         <Link href="/#work" className={styles.back}>
           ← Work
@@ -342,7 +342,7 @@ export default function MeeshoTeardown() {
           </Link>
         </footer>
       </div>
-    </>
+    </main>
   );
 }
 

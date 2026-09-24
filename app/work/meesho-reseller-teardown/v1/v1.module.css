@@ -132,3 +132,36 @@
   .rankRow { grid-template-columns: auto minmax(0, 1fr); }
   .rankTag { grid-column: 1 / -1; text-align: left; }
 }
+
+/* ---- evidence strip ---- */
+
+.figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(16px, 2.5vw, 28px);
+  margin: 30px 0 8px;
+}
+
+.figure { flex: 0 1 240px; margin: 0; min-width: 0; }
+
+.figureFrame {
+  padding: 9px;
+  background: var(--ground-warm);
+  border: 1px solid var(--hair-strong);
+  border-radius: 2px;
+}
+
+.figureImg { width: 100%; height: auto; filter: sepia(0.1) saturate(0.9); }
+
+.figureCap {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--body);
+  margin-top: 9px;
+  line-height: 1.5;
+}
+
+@media (max-width: 560px) {
+  .figure { flex: 1 1 100%; max-width: 300px; }
+}

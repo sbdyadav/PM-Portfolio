@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import s from "../../../study.module.css";
 import v from "./v1.module.css";
 
@@ -204,6 +205,24 @@ export default function MeeshoV1() {
             badge, building an expectation across three touchpoints — then
             breaking it at the moment of highest commitment.
           </p>
+        </div>
+
+        <div className={v.figures}>
+          <Figure
+            src="/case-studies/meesho/s1-grid.jpeg"
+            alt="Meesho home grid as a first-time buyer sees it, with the trust banner promising Cash on Delivery"
+            caption="Step 7 · the grid, with COD promised in the banner"
+          />
+          <Figure
+            src="/case-studies/meesho/s2-pdp.jpeg"
+            alt="Meesho product detail page showing the offer countdown timer and the repeated trust banner"
+            caption="Step 8 · PDP, 12-hour timer and the same badge"
+          />
+          <Figure
+            src="/case-studies/meesho/s5-payment.jpeg"
+            alt="Meesho payment screen stating Cash on Delivery is not supported for this order"
+            caption="Step 10 · the promise withdrawn"
+          />
         </div>
       </section>
 
@@ -454,6 +473,31 @@ export default function MeeshoV1() {
         <Link href="/work/round-up-investing">Round-Up Investing →</Link>
       </div>
     </main>
+  );
+}
+
+function Figure({
+  src,
+  alt,
+  caption,
+}: {
+  src: string;
+  alt: string;
+  caption: string;
+}) {
+  return (
+    <figure className={v.figure}>
+      <div className={v.figureFrame}>
+        <Image
+          src={src}
+          alt={alt}
+          width={330}
+          height={727}
+          className={v.figureImg}
+        />
+      </div>
+      <figcaption className={v.figureCap}>{caption}</figcaption>
+    </figure>
   );
 }
 

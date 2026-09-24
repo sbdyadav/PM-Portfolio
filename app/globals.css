@@ -5,7 +5,8 @@
   --body: #444141;
   --accent-dark: #7d5411;
   --accent-mid: #b68235;
-  --accent-light: #e1ad66;
+  /* numeral tone — 3.57:1 on ground, was #e1ad66 at 1.81:1 */
+  --accent-light: #a9752b;
   --hair-strong: rgba(32, 31, 29, 0.16);
   --hair-soft: rgba(32, 31, 29, 0.09);
 
@@ -54,7 +55,7 @@ h1, h2, h3, h4 { font-family: var(--font-cormorant), Georgia, serif; font-weight
 }
 
 .teardown {
-  max-width: 1060px;
+  max-width: 1080px;
   margin: 0 auto;
   padding-inline: 40px;
 }
