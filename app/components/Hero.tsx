@@ -48,7 +48,7 @@ export default function Hero() {
         </div>
 
         <Link href="/#work" className={styles.driver}>
-          Two teardowns below — including the one where I got the user wrong
+          Three pieces below — including the one where I got the user wrong
           first <span aria-hidden="true">↓</span>
         </Link>
       </div>
