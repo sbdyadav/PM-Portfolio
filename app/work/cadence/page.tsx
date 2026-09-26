@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import s from "../../study.module.css";
+// Written by `npm run capture:cadence`, so the reserved space always
+// matches the real files — panel heights move as the model rewrites.
+import SHOTS from "./shots.json";
 
 export const metadata: Metadata = {
   title: "Cadence — the one column that made it an AI product",
@@ -71,7 +74,7 @@ export default function Cadence() {
         </div>
 
         <Shot
-          src="/case-studies/cadence/dashboard.png"
+          name="dashboard"
           alt="Cadence dashboard listing five habits with four weeks of check-in history, marked with amber completion dots"
           caption="Five habits, four weeks of history. The amber dots are code’s work, not the model’s."
         />
@@ -101,7 +104,7 @@ export default function Cadence() {
         </p>
 
         <Shot
-          src="/case-studies/cadence/refusal.png"
+          name="refusal"
           alt="The analysis view showing two flagged habits; the three-day-old Spanish habit does not appear"
           caption="Spanish is three days old. It’s on the dashboard and absent from the analysis — not because the model declined, but because it was never asked."
         />
@@ -127,7 +130,7 @@ export default function Cadence() {
         </p>
 
         <Shot
-          src="/case-studies/cadence/analysis.png"
+          name="analysis"
           alt="A generated nudge citing a specific decline start date and quoting the user’s own check-in note"
           caption="The nudge cites the date and the user’s own note. Both were supplied by code, not generated."
         />
@@ -184,7 +187,7 @@ export default function Cadence() {
         </p>
 
         <Shot
-          src="/case-studies/cadence/parser.png"
+          name="parser"
           alt="The habit-creation field reading the plain-English entry “Stop buying coffee out” as a stop habit"
           caption="Typing a habit in plain English. ‘Stop buying coffee out’ is read as a stop habit, where a check-in means you succeeded in not doing it — which inverts the streak maths."
         />
@@ -213,22 +216,23 @@ export default function Cadence() {
 }
 
 function Shot({
-  src,
+  name,
   alt,
   caption,
 }: {
-  src: string;
+  name: keyof typeof SHOTS;
   alt: string;
   caption: string;
 }) {
+  const { w, h } = SHOTS[name];
   return (
     <figure className={s.shot}>
       <div className={s.shotFrame}>
         <Image
-          src={src}
+          src={`/case-studies/cadence/${name}.png`}
           alt={alt}
-          width={1600}
-          height={1000}
+          width={w}
+          height={h}
           sizes="(max-width: 760px) 100vw, 680px"
           className={s.shotImg}
         />
