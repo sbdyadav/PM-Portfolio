@@ -488,9 +488,7 @@ export default function RoundUp() {
 
       <div className={s.next}>
         <Link href="/#work">← All work</Link>
-        <Link href="/work/meesho-reseller-teardown">
-          Meesho teardown →
-        </Link>
+        <Link href="/work/cadence">Cadence →</Link>
       </div>
     </main>
   );

@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["", 1.0],
     ["/work/meesho-reseller-teardown", 0.9],
     ["/work/round-up-investing", 0.9],
+    ["/work/cadence", 0.9],
     ["/about", 0.8],
     ["/blog", 0.7],
     ["/work/meesho-reseller-teardown/v1", 0.6],
