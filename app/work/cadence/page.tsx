@@ -7,7 +7,7 @@ import s from "../../study.module.css";
 import SHOTS from "./shots.json";
 
 export const metadata: Metadata = {
-  title: "Cadence — the one column that made it an AI product",
+  title: "Cadence — the one step worth giving to a model",
   description:
     "A habit tracker built in 150 minutes on 17 of 50 credits, scored 90/100 — and the single step that justified putting a model in it at all.",
   alternates: { canonical: "/work/cadence" }
@@ -23,13 +23,14 @@ export default function Cadence() {
       <header className={s.head}>
         <span className={s.eyebrow}>03 · Build · 2026</span>
         <h1 className={s.title}>
-          Cadence — the one column that made it an AI product
+          Cadence — the one step worth giving to a model
         </h1>
         <p className={s.lede}>
-          A habit tracker built in 150 minutes, using 17 of 50 available
-          credits, scored 90/100 by an external judge. Most of it isn&apos;t an
-          AI product at all, and working out which part was took longer than
-          building the thing.
+          A habit tracker built in 150 minutes during Ayuda Learning&apos;s AI
+          build hackathon, using 17 of the 50 build credits available with no
+          retries. Second of eight teams, marked 90/100 against the
+          programme&apos;s rubric. Most of it isn&apos;t an AI product at all,
+          and working out which part was took longer than building the thing.
         </p>
 
         <div className={s.downloads}>
@@ -60,6 +61,14 @@ export default function Cadence() {
           of it gets slower, more expensive and less reliable.
         </p>
         <p>
+          I should say what this piece doesn&apos;t do. Everything else on this
+          site starts by questioning the brief. Here I couldn&apos;t — the use
+          case was fixed, there were no users to talk to, and the data is
+          invented. So the judgment moved downstream. Given a problem I
+          didn&apos;t get to choose, the question became which single step
+          deserved a model, and which ones would be made worse by one.
+        </p>
+        <p>
           There was exactly one step worth giving to a model: working out which
           habit is genuinely slipping, and why. Not whether the numbers dropped
           — code answers that. Which one deserves attention this week, and what
@@ -86,6 +95,12 @@ export default function Cadence() {
           the drop against a threshold, compute the date the decline started,
           and pass only the flagged habits to the model — with a hard rule that
           the model never invents or revises a date.
+        </p>
+        <p>
+          I had a competing design and it was worse. Recognising that quickly,
+          and throwing mine away rather than defending it, was the most useful
+          thing I did in the first hour — the call chain in the next section was
+          built on top of his foundation, and that part was mine.
         </p>
         <p>
           I took his over mine, and the reasoning is the point. Detection is
@@ -184,6 +199,14 @@ export default function Cadence() {
           gets someone back on track more often than a generic one. Until that
           exists, every improvement to the prompts is guesswork, and saying
           otherwise would be overclaiming.
+        </p>
+        <p>
+          If I had to name the number this product lives or dies on, it&apos;s
+          the 14-day recovery rate after a nudge — whether a habit that was
+          slipping gets back to its baseline — compared between a nudge that
+          names a specific cause and a generic one. If the specific version
+          doesn&apos;t beat the generic one, the whole diagnosis layer is
+          expensive decoration. I don&apos;t have that number.
         </p>
 
         <Shot

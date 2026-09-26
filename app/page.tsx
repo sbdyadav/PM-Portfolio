@@ -26,9 +26,9 @@ const cards = [
     num: "03",
     kicker: "Build",
     href: "/work/cadence",
-    title: "Cadence — the one column that made it an AI product",
+    title: "Cadence — the one step worth giving to a model",
     summary:
-      "A habit tracker built in 150 minutes on 17 of 50 credits, scored 90/100. Most of it isn’t an AI product at all — the work was finding the single step that was, and refusing to put a model anywhere else.",
+      "Most of a habit tracker is ordinary software. Finding the single step that deserved a model — and keeping the model away from the arithmetic — took longer than building it. Includes the threshold I got wrong, and why a habit that had fully stopped was invisible to it.",
     cta: "Read the build",
   },
 ];
