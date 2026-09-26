@@ -22,6 +22,15 @@ const cards = [
       "A fintech brief taken end to end before a line of code: three falsifiable hypotheses, six users recruited from 268 registrations, a staged interview guide, and a design-method session built to catch what interviews can't.",
     cta: "Read the plan",
   },
+  {
+    num: "03",
+    kicker: "Build",
+    href: "/work/cadence",
+    title: "Cadence — the one column that made it an AI product",
+    summary:
+      "A habit tracker built in 150 minutes on 17 of 50 credits, scored 90/100. Most of it isn’t an AI product at all — the work was finding the single step that was, and refusing to put a model anywhere else.",
+    cta: "Read the build",
+  },
 ];
 
 export default function Home() {

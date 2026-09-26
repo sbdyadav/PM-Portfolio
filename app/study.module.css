@@ -257,6 +257,32 @@
 .dlGhost { border: 1px solid var(--accent-mid); color: var(--accent-dark); }
 .dlGhost:hover { background: var(--ground-warm); color: var(--ink); }
 
+/* ---- inline screenshot, full reading width ---- */
+
+.shot { margin: 34px 0; }
+
+.shotFrame {
+  padding: 10px;
+  background: var(--ground-warm);
+  border: 1px solid var(--hair-strong);
+  border-radius: 3px;
+}
+
+.shotImg { width: 100%; height: auto; }
+
+.shotCap {
+  font-size: 13.5px;
+  line-height: 1.62;
+  font-style: italic;
+  color: var(--body);
+  margin-top: 11px;
+  max-width: 62ch;
+}
+
+/* anchor targets clear the sticky nav */
+
+.anchor { scroll-margin-top: calc(var(--nav-h) + 24px); }
+
 /* ---- footer nav ---- */
 
 .next {
